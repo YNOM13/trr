@@ -1,0 +1,90 @@
+// Файл для стилів обнулення
+@import "nullstyle.scss";
+
+@font-face {
+	font-family: 'Candara';
+	src: url('../fonts/CANDARAB.eot');
+	src: local('вє'), url('../fonts/CANDARAB.woff') format('woff'), url('../fonts/CANDARAB.ttf') format('truetype'), url('../fonts/CANDARAB.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+body{
+    font-family: 'Candara';
+}
+.block{
+  background: rgba(105, 202, 105, 0.5);
+    padding: 30px;
+
+}
+.block__main-title {
+    text-align: center;
+    font-size: 34px;
+    text-transform: uppercase;
+    font-family: 'Candara';
+     font-weight: 700;
+     letter-spacing: 2px;
+}
+.block__main-title_font_yellow {
+    color: yellow;
+    text-shadow: 2px 2px 2px #000; 
+    transition: 0.5s;
+    &:hover{
+        text-decoration: underline;
+        
+    }
+}
+
+.consideration-meta-tags {
+    background: rgb(134, 175, 134);
+    border: 1px solid green;
+    padding: 30px  10px 0 10px ;
+    text-align: center;
+}
+.consideration-meta-tags__title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    a{
+        color: yellow;
+        text-shadow: 1px 1px 3px #000;
+        transition: 0.5s;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+.consideration-meta-tags__subtitles {
+    font-size: 20px;
+    margin-top: 30px;
+    line-height: 25px;
+    >span{
+        text-transform: lowercase;
+        color: greenyellow;        
+    }
+}
+.consideration-meta-tags__subtitles-more-info{
+     font-size: 20px;
+    margin-top: 30px;
+    line-height: 25px;
+    span{ 
+        text-transform: lowercase;
+        color: blue;
+       
+    }
+}
+/*
+$fcs:yellow;
+%shablon{
+    height: 100px;
+    width: 100px;
+    background: black;
+}
+@mixin ed($fz,$cw) {
+    font-size: $fz;
+    color: $cw;
+}
+.ss{
+    @extend %shablon;
+    @include ed(24px,white );
+    color: $fcs;
+}*/

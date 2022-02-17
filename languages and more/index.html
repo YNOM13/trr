@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Наш сайт розповідає про мета-теги, які потрібно використовува і також найпопулярніші, також використовуємо на цьому ж сайті певний адаптив, щоб самому навчитись в цій штуці">
+	<meta name="keywords" content="block_bg_green,головна шапка, жовте-силки, інші кольори - контраст, опис що таке мета.">
+	<meta name="Author" content="Nechuporyk Yaroslav">
+	<meta name="Address" content="Tarasa Shevchenka 34, Kyev">
+	<meta name="Copyright" content="Our copyright is too good for us and for everyone, enjoy guys">
+	<meta name="format-detection" name="telephone=no">
+	<meta name="robots" name="none">
+	<meta name="robots" name="noimageindex,nofollow">
+
+	<link rel="stylesheet" href="../css/style.css">
+	<title>Document</title>
+</head>
+<body>
+
+	<div class="block block_bg_green">
+		<h1 class="block__main-title">Сьогодні ми розглянемо <a href="https://www.youtube.com/watch?v=S6o65mWjhe4&list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr&index=18&t=510s&ab_channel=%D0%A4%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81%D0%B5%D1%80%D0%BF%D0%BE%D0%B6%D0%B8%D0%B7%D0%BD%D0%B8-IT%D0%B8%D1%84%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81" class="block__main-title_font_yellow">Мета-теги</a></h1>
+	</div>	
+	
+	<div class="consideration-meta-tags">
+		<h2 class="consideration-meta-tags__title">мета тег з значенням <a href="https://developer.mozilla.org/ru/docs/Glossary/Viewport" target="_blank" >name=viewport</a></h2>
+
+		<p class="consideration-meta-tags__subtitles">
+			Даний мета тег може мати в значенні name дуже багато різних дій. Але спочатку розглянемо що ж таке означає viewport (Простими словами це видима частина контенту, воно пишеться в атрибут name). Дальше після того як до мета додали viewport потрібно задати новий атрибут під назвою content. <br/> 
+			<span>Content</span> в саме цей атрибут буде записуватись більшість значеннь. <br/> Наприклад <span>width=1000</span> це значення використовується якщо не потрібен адаптив і ширина повинна бути  взятою з макету макету, щоб все працювало як потрібно. 
+			Можна просто видалити значення з <span>Сontent</span> то деякі браузе на адаптиві будуть брати свої параметрив px за замовчуванням.
+			Тому потрібно задати своє значення. Також значення не може бути мінусовим навіть не так, значення повинне починатися від 200px-10000px. <br/> Такоє є і висота сайту яка зазначається як width, але замість width пишеться height. Але зазвичай це не використовується тому що  буде достатньо якщо ми введемо width.
+			<span>Height</span> також значення не може бути мінусовим і починається воно від 220px-10000px. <span>(Не є обов'язковим)</span>
+		</p>
+		<br/>
+		<p class="consideration-meta-tags__subtitles-more-info">
+			Якщо ж нам потрібнем адаптив, то ми повинні використати в наш атрибут <span>content</span> під назвою <span>width=device-width</span> - це значення придаться нашому контенту підстроювання під зменшення вікна (не як з точним, (<span>width=1000</span>), тому що воно просто зменшує контент ). 
+			Далі через кому після <span>width=device-width</span> потрібно записати початковий масштаб нашої веб-сторінки і записується він так <span>initial-scale=</span> значення записуються так 0.1-1.0 .
+			Наприклад в нас записано значення <span>initial-scale=1.0</span>
+			це буде означати, що початковий масштаб буде починатись в 100%, якщо ж замість 1.0 буде стояти 0.5, то це означає, що масштаб буде починатись з 50% на телефоні. Значення 1.0 оприділяє масштаб 1:1 (це значення є найрекомендованішим). Його можна збільшити. <br/>
+			Тепер заборона масштабування на телефоні воно пишеться <span>user-scalable</span>- є два значення no(0) yes(1) (вони принімається якщо в значенні initial-scale вказано все крім 1.0), якщо ж нам не потрібна заборона то можна і не писати, тому що воно поставлене за замовчуванням. Але якщо нам не потрібно, щоб на телефоні можна було збільшувати контент, то пишемо <span>user-scalable=no</span>, або (0) пишеться воно зазвичай після <span>initial-scale</span> , але цю штуку використовувати потрібно дуже обережно, тому що може бути малий штрифт тощо. Ці значення дуже круті, тому варто їх повчити.
+			<br/>
+			Ну й останнє що ми розглянемо це буде мастшаб, тобто початковий і кінцевий, максимальний або ж мінімальний (області перегляду) 
+			їх є два <span>maximum-scale=1.0 | minimum-scale=1.0</span>.
+			Ці два значення  означають одне, перше означає який має бути максимальний адаптив а другий мінімальний. 
+			Але варто писати з цими штуками дуже акуратно, тому що вони погано себе показують з контентом. 
+			<br/>
+			<br/>
+			Далі розглянемо атрибути для опису <span>name="description" (не більше 120)</span> і в content пишемо, про що наш сайт і тд, також є <span>keywords</span>(ключові слова) тут майже та сама ситуаці, але пишемо слова які характеризують наш контент і тд(не більше 20).
+			Ще є назви типу пиушться в name="" атрибути такі як <span>Author, Copuright, Address</span> ну й в контент пишемо те що потрібно.
+			<br/>
+			 Pіч яку ми ми розглянемо це буде мета з атрибутом <span>name="refresh" </span> це заборона ідексації сторінки в content пишемо такі атрибути значення як <span>noindex, nofollow, або ж просто і коротко none</span> також є індексація тільки для фотографій і пишеться вона так <span>noimageindex,nofollow</span>
+			 <br/>
+			 Тепер заблокуємо на айфоні набирання номеру в мета пишемо name з значенням <span>format-detection</span> а в контент пишемо <span>content=telephone=no</span>
+			 <br/><br/>
+			 Ну й останнє що ми розглянемо це буде метаз новим атрибутом 
+			 <span>http-equiv="refresh" content="0; url=link"</span>	
+			 перше значення в контенті це секунди, а далі силка, це буде перехід на іншу сторінку за певний час, дуже часто використовують цю штуку. Навіть як загрузка сайта. Наприклад в там де значення url пишемо наш html і воно перейде за певний час на наш основний гарний сайт).
+			 <br/><br/><br/>
+		</p>
+	</div>
+</body>
+</html>
+
